@@ -8,15 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class EnhancedFib {
 
 
+
     @RequestMapping("/fibendnumber")
     public String showFib(@RequestParam("number") String number){
         int inputNumber = Integer.parseInt(number);
+        int counter=0;
         StringBuilder sb = new StringBuilder(" ");
+        while(true){
 
-        while(inputNumber>=0){
-            ;
-            sb.append(" " +fib(inputNumber));
-            inputNumber--;
+            sb.append(" " +fib(counter));
+            counter++;
+            if(counter>inputNumber) break;
         }
 
         return  sb.toString();
