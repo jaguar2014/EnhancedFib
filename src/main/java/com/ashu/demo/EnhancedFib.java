@@ -25,7 +25,7 @@ public class EnhancedFib {
 
     }
 
-    public int fib(int number){
+    private  int fib(int number){
         if(number==0){
             return 0;
         }
